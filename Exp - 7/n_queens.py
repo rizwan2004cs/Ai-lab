@@ -1,7 +1,7 @@
 def print_solution(board):
     """Utility function to print the board."""
     for row in board:
-        print(" ".join("Q" if cell else "." for cell in row))
+        print(" ".join("Q" if cell else "*" for cell in row))
     print()
 
 def is_safe(board, row, col, n):
@@ -20,6 +20,7 @@ def is_safe(board, row, col, n):
     for i, j in zip(range(row, n, 1), range(col, -1, -1)):
         if board[i][j]:
             return False
+
 
     return True
 
